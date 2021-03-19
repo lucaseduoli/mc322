@@ -1,6 +1,12 @@
 # mc322
 Repositório para armazenar as tarefas de MC322 - Programação Orientada a Objetos
 
+# Aluno
+Lucas Eduardo Ramos de Oliveira
+
+# Curso
+Engenharia da Computação
+
 # Quem sou eu
     Sou Lucas Eduardo, moro em São José dos Campos e estudo Engenharia da Computação na UNICAMP. Sempre fui apaixonado por computadores e por ciência, fazia inúmeros projetos de eletrônica quando criança e aprendi a mexer em um computador muito cedo.
     No ensino médio, comecei a aprender Arduino e a participar de um time de robótica. Com isso, fui aprendendo cada vez mais o funcionamento dos componentes, a ligação eletrônica, a programação envolvida e etc.
