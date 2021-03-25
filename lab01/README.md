@@ -3,3 +3,6 @@
 
 ## Notebook 2 sobre Empréstimos e TAD (opcional)
 > (ainda não feito)
+
+## Notebook sobre Primos(atividade feita na aula)
+> [Link para o Notebook](https://github.com/lucaseduoli/mc322/blob/main/lab01/notebook/primos01-ra182333.ipynb)
