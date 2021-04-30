@@ -1,6 +1,6 @@
-package mc322.lab06;
+package mc322.lab05b;
 
-public class Peao extends Pecas {
+public class Peao extends Peca {
     private char estado;
     private int posX, posY;
 

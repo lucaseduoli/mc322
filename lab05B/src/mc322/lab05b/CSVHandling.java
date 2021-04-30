@@ -1,4 +1,4 @@
-package mc322.lab06;
+package mc322.lab05b;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

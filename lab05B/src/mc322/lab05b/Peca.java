@@ -1,6 +1,6 @@
-package mc322.lab06;
+package mc322.lab05b;
 
-public class Pecas {
+public class Peca {
     public char getCor(){
         return 'e';
     }

@@ -1,4 +1,4 @@
-package mc322.lab06;
+package mc322.lab05b;
 
 public class AppDama {
     public static String[] executaJogo(String caminhoEntrada, String caminhoSaida){
@@ -27,10 +27,6 @@ public class AppDama {
         String caminhoEntrada = args[0];
         String caminhoSaida = args[1];
         String[] estados = executaJogo(caminhoEntrada, caminhoSaida);
-        System.out.println("Vetores retornados pela função:");
-        for (String estado : estados) {
-            System.out.println(estado);
-        }
 
     }
 }

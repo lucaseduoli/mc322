@@ -1,12 +1,11 @@
-package mc322.lab06;
+package mc322.lab05b;
 
 public class Tabuleiro {
-    private Pecas[][] pecas;
-    private boolean erro, erroAtual;
+    private Peca[][] pecas;
+    private boolean erroAtual;
 
     public Tabuleiro() {
-        pecas = new Pecas[8][8];
-        erro = false;
+        pecas = new Peca[8][8];
         for (int i = 0; i <= 7; i++)
             for (int j = 0; j <= 7; j += 2)
                 if (i > 4 || i < 3) {
@@ -80,7 +79,6 @@ public class Tabuleiro {
                 pecas[posYf][posXf] = new Dama(Character.toUpperCase(getPeca(posXf, posYf)), posXf, posYf);
             }
         } else {
-            erro = true;
             erroAtual = true;
         }
     }
@@ -90,7 +88,7 @@ public class Tabuleiro {
         char letra;
         int numero;
         String estadoAtual = "";
-        if(erro == false) {
+        if(erroAtual == false) {
             estadoFinal = new String[64];
             for (int i = 0; i <= 7; i++) {
                 for (int j = 0; j <= 7; j++) {
