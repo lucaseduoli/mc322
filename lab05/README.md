@@ -1,4 +1,4 @@
-# Lab04 - Dama
+# Lab05 - Dama
 
 ## Arquivos Java sobre Dama
 
