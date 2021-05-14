@@ -22,29 +22,34 @@ public class ControleJogo {
 
         while( comando != 'q'){
             if( comando == 'w' || comando == 'a' || comando == 's' || comando == 'd') {
-                vetor = heroi.executaMovimento(comando);
-                if (vetor[0] != -1)  {
-                    qtdPontos -= 15;
-                    if (vetor[0] == 1)
-                        qtdPontos -= 1000;
-                    if (vetor[1] == 1)
-                        qtdPontos -= 100;
-                    if (vetor[2] == 1)
-                        qtdPontos += 500;
-                }
-                if(heroi.getPosX() == 0  && heroi.getPosY() == 0 && heroi.getOuro() > 0){
-                    qtdPontos+= 1000;
-                    vetor[0] = 2;
-                }
-                imprimeEstado(vetor[0]); //argumento indica se morreu ou não, se for 1, morreu, se for 0, não
-                if(vetor[0] == 1 || vetor[0] == 2){
-                    System.out.println();
-                    System.out.println("Se quiser sair, digite 'q', do contrário, digite qualquer outro caractere.");
-                    comando = keyboard.nextLine().charAt(0);
-                    return (comando == 'q' ? 0 : 1);
-                }
-                if(vetor[2] == 1){
-                    System.out.println("Você matou o Wumpus!!!");
+                if(heroi.getPrimeiroComponente(heroi.getPosX(), heroi.getPosY()) != 'O') {
+                    vetor = heroi.executaMovimento(comando);
+                    if (vetor[0] != -1) {
+                        qtdPontos -= 15;
+                        if (vetor[0] == 1)
+                            qtdPontos -= 1000;
+                        if (vetor[1] == 1)
+                            qtdPontos -= 100;
+                        if (vetor[2] == 1)
+                            qtdPontos += 500;
+                    }
+                    if (heroi.getPosX() == 0 && heroi.getPosY() == 0 && heroi.getOuro() > 0) {
+                        qtdPontos += 1000;
+                        vetor[0] = 2;
+                    }
+                    imprimeEstado(vetor[0]); //argumento indica se morreu ou não, se for 1, morreu, se for 0, não
+                    if (vetor[0] == 1 || vetor[0] == 2) {
+                        System.out.println();
+                        System.out.println("Se quiser sair, digite 'q', do contrário, digite qualquer outro caractere.");
+                        comando = keyboard.nextLine().charAt(0);
+                        return (comando == 'q' ? 0 : 1);
+                    }
+                    if (vetor[2] == 1) {
+                        System.out.println("Você matou o Wumpus!!!");
+                    }
+                } else {
+                    imprimeEstado(0);
+                    System.out.println("Você deve pegar o ouro antes de andar!");
                 }
             } else if ( comando == 'k'){
                 int retorno = heroi.equipaFlecha();
